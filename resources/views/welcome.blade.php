@@ -84,6 +84,15 @@
                 <div class="title m-b-md">
                     Add job position
                 </div>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="/addJobPosition" method="post">
 
                     <label for="title">Title: </label><br>

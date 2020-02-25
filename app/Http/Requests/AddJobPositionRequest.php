@@ -25,6 +25,9 @@ class AddJobPositionRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
+            'jobDescription' => 'required|string',
+            'email' => 'required|email',
+            'companyName' => 'required|string'
         ];
     }
 }
